@@ -16,7 +16,7 @@
 void AEnemyShip::BeginPlay()
 {
 	Super::BeginPlay();
-    random = FMath::RandRange(3,15);
+    random = FMath::RandRange(3.65,20.12);
     FTimerHandle TimerHandle;
     GetWorld()->GetTimerManager().SetTimer(TimerHandle,this,&AEnemyShip::Shoot,random,false);
 }
@@ -24,7 +24,7 @@ void AEnemyShip::BeginPlay()
 void AEnemyShip::Shoot()
 {
     Super::Shoot();
-    random = FMath::RandRange(5,15);
+    random = FMath::RandRange(5.5,15.5);
     FTimerHandle TimerHandle;
     GetWorld()->GetTimerManager().SetTimer(TimerHandle,this,&AEnemyShip::Shoot,random,false);
 }
